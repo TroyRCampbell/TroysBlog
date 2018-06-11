@@ -1,0 +1,16 @@
+﻿@model TroysBlog.Models.ViewModels.BlogViewModel
+
+<article class="row">
+    <div class="col-sm-12 blog-image">
+        <img src="@Model.Blog.ImagePath" />
+    </div>
+    <header class="col-sm-12 blog-header">
+        <h2>@Model.Blog.Title</h2>
+    </header>
+    <p class="col-sm-12 blog-content">
+        @Model.Blog.Content
+    </p>
+    <footer class="col-sm-12 blog-footer">
+        <p><em>Article Posted by <strong>@Model.Blog.AuthoredBy</strong> on @Model.Blog.AuthoredOn</em></p>
+    </footer>
+</article>

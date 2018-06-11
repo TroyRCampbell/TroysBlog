@@ -1,0 +1,26 @@
+﻿@model TroysBlog.Models.ViewModels.HomeViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron mb-1">
+    <h1>Welcome to my blog</h1>
+    <lead class="lead">Site Summary, stuff about this site</lead>
+</div>
+
+<div class="row">
+    <div class="col-sm-8">
+        @foreach (var blog in Model.Blogs)
+        {
+            @Html.Partial("_BlogCard", blog);
+        }
+    </div>
+    <aside class="col-sm-4 recent-comment-container">
+        <h5>Recent Comments:</h5>
+
+        @foreach (var comment in Model.RecentComments)
+        {
+            @Html.Partial("_RecentComment", comment);
+        }
+    </aside>
+</div>

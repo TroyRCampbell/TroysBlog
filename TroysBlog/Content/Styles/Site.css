@@ -1,0 +1,107 @@
+﻿body {
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.header-button {
+    padding: 5px;
+}
+
+    .header-button:hover {
+        background-color: #e6e6ff;
+    }
+
+    .header-button a {
+        text-decoration: none;
+        color: #404040;
+    }
+
+.blog-card {
+    max-width: 100%;
+    padding: 25px;
+    margin: 10px 0;
+}
+
+    .blog-card .blog-card-image {
+        width: 250px;
+        display: block;
+        margin: 0 auto;
+    }
+
+.blog-image img {
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+}
+
+.blog-header {
+
+}
+
+.blog-content {
+
+}
+
+.blog-footer {
+
+}
+
+.recent-comment-container {
+    margin: 10px 0;
+}
+
+    .recent-comment-container .recent-comment {
+        border-top: thin solid #e6e6ff;
+        padding: 5px;
+    }
+
+.quotes {
+    font-size: 20px;
+    quotes: "\201C""\201D""\2018""\2019";
+    padding: 10px 20px;
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+}
+
+    .quotes:before {
+        content: open-quote;
+        display: inline;
+        height: 0;
+        line-height: 0;
+        left: -10px;
+        position: relative;
+        top: 10px;
+        color: #ccc;
+        font-size: 2em;
+    }
+
+    .quotes:after {
+        content: close-quote;
+        display: inline;
+        height: 0;
+        line-height: 0;
+        left: 10px;
+        position: relative;
+        top: 15px;
+        color: #ccc;
+        font-size: 2em;
+    }

@@ -122,7 +122,7 @@
     </Key>
     <Property Name="BlogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Title" Type="String" Nullable="false" MaxLength="120" FixedLength="false" Unicode="true" />
-    <Property Name="ImagePath" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ImageFileName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="Summary" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="AuthoredBy" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />

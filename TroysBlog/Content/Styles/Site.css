@@ -22,6 +22,14 @@ textarea {
     max-width: 280px;
 }
 
+.navbar {
+    border-bottom: thin solid lightgray
+}
+
+.jumbotron {
+    background-color: #d7d7ea;
+}
+
 .header-button {
     padding: 5px;
 }
@@ -35,14 +43,19 @@ textarea {
         color: #404040;
     }
 
+.create-new-button {
+    width: 100%;
+}
+
 .blog-card {
     max-width: 100%;
     padding: 25px;
     margin: 10px 0;
+    cursor: pointer;
 }
 
     .blog-card .blog-card-image {
-        width: 250px;
+        max-width: 250px;
         display: block;
         margin: 0 auto;
     }
@@ -72,6 +85,8 @@ textarea {
     .recent-comment-container .recent-comment {
         border-top: thin solid #e6e6ff;
         padding: 5px;
+        cursor: pointer;
+        background-color: white;
     }
 
 .quotes {

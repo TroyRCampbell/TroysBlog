@@ -67,7 +67,7 @@
     </Key>
     <Property Name="BlogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Title" Type="nvarchar" MaxLength="120" Nullable="false" />
-    <Property Name="ImagePath" Type="nvarchar" MaxLength="250" />
+    <Property Name="ImageFileName" Type="nvarchar" MaxLength="250" />
     <Property Name="Summary" Type="nvarchar" MaxLength="250" />
     <Property Name="Content" Type="nvarchar(max)" />
     <Property Name="AuthoredBy" Type="nvarchar" MaxLength="256" Nullable="false" />

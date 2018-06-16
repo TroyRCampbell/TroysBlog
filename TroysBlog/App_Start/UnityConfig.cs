@@ -1,7 +1,17 @@
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin.Security;
 using System;
+using System.Data.Entity;
+using System.Net;
+using System.Web;
+using TroysBlog.Controllers;
 using TroysBlog.Data.Repositories;
+using TroysBlog.Models;
 using TroysBlog.Services;
 using Unity;
+using Unity.Injection;
+using Unity.Lifetime;
 
 namespace TroysBlog
 {
@@ -46,6 +56,16 @@ namespace TroysBlog
 
             container.RegisterType<IBlogRepository, BlogRepository>();
             container.RegisterType<ICommentRepository, CommentRepository>();
+
+            container.RegisterType<DbContext, ApplicationDbContext>(new HierarchicalLifetimeManager());
+            container.RegisterType<UserManager<ApplicationUser>>(new HierarchicalLifetimeManager());
+            container.RegisterType<IUserStore<ApplicationUser>, UserStore<ApplicationUser>>(new HierarchicalLifetimeManager());
+            container.RegisterType<AccountController>(new InjectionConstructor());
+            container.RegisterType<IAuthenticationManager>(
+                new InjectionFactory(
+                    o => HttpContext.Current.GetOwinContext().Authentication
+                )
+            );
         }
     }
 }

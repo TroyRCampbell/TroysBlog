@@ -74,7 +74,7 @@
           <ScalarProperty Name="AuthoredBy" ColumnName="AuthoredBy" />
           <ScalarProperty Name="Content" ColumnName="Content" />
           <ScalarProperty Name="Summary" ColumnName="Summary" />
-          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="ImageFileName" ColumnName="ImageFileName" />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="BlogId" ColumnName="BlogId" />
         </MappingFragment>

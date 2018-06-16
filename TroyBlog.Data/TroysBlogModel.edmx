@@ -72,7 +72,7 @@
           </Key>
           <Property Name="BlogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Title" Type="nvarchar" MaxLength="120" Nullable="false" />
-          <Property Name="ImagePath" Type="nvarchar" MaxLength="250" />
+          <Property Name="ImageFileName" Type="nvarchar" MaxLength="250" />
           <Property Name="Summary" Type="nvarchar" MaxLength="250" />
           <Property Name="Content" Type="nvarchar(max)" />
           <Property Name="AuthoredBy" Type="nvarchar" MaxLength="256" Nullable="false" />
@@ -317,7 +317,7 @@
           </Key>
           <Property Name="BlogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Title" Type="String" Nullable="false" MaxLength="120" FixedLength="false" Unicode="true" />
-          <Property Name="ImagePath" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ImageFileName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="Summary" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="AuthoredBy" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
@@ -431,7 +431,7 @@
                 <ScalarProperty Name="AuthoredBy" ColumnName="AuthoredBy" />
                 <ScalarProperty Name="Content" ColumnName="Content" />
                 <ScalarProperty Name="Summary" ColumnName="Summary" />
-                <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+                <ScalarProperty Name="ImageFileName" ColumnName="ImageFileName" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="BlogId" ColumnName="BlogId" />
               </MappingFragment>
@@ -450,7 +450,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-        </EntityContainerMapping>
+          </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>

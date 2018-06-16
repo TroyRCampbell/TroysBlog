@@ -3,19 +3,25 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron mb-1">
-    <h1>Welcome to my blog</h1>
-    <lead class="lead">Site Summary, stuff about this site</lead>
+<div class="jumbotron mb-1 d-none d-md-block">
+    <h1>Welcome to Troys Blog</h1>
+    <lead class="lead">This blog site was created to demonstrate Troy's ASP.NET MVC 5 skills.</lead>
 </div>
 
 <div class="row">
-    <div class="col-sm-8">
+    <div class="col-md-8 col-sm-12">
+
+        @*@if (this.User.IsInRole("Admin"))
+        {*@
+            @Html.ActionLink("Create New Blog", "Create", "Blog", null, new { @class = "btn btn-success create-new-button" })
+        @*}*@
+
         @foreach (var blog in Model.Blogs)
         {
             @Html.Partial("_BlogCard", blog);
         }
     </div>
-    <aside class="col-sm-4 recent-comment-container">
+    <aside class="col-md-4 recent-comment-container d-none d-sm-none d-md-block">
         <h5>Recent Comments:</h5>
 
         @foreach (var comment in Model.RecentComments)
